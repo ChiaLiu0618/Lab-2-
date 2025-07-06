@@ -75,38 +75,6 @@ The goal is to correctly process coordinates, produce valid outputs, and meet sy
 9. Forbidden names: `error`, `latch`, `congratulation`.
 10. `out_valid` must not overlap with `in_valid`.
 
----
-
-## Grading
-
-| Component | Weight |
-|-----------|--------|
-| RTL and Gate-level correctness | 70% |
-| Performance (Area × Execution Cycle) | 30% |
-
-- 2nd demo submission: 30% penalty.
-- Plagiarism: 0 points.
-- Naming violations: −5 points.
-
----
-
-## Submission Deadlines
-
-- **1st Demo:** 2023/10/02 (Mon) 12:00 PM
-- **2nd Demo:** 2023/10/04 (Wed) 12:00 PM
-
----
-
-## Commands
-
-| Step | Command |
-|------|---------|
-| RTL Sim | `./01_run_vcs_rtl` |
-| Synthesis | `./01_run_dc_shell` |
-| Gate-level Sim | `./01_run_vcs_gate` |
-| Pack Submission | `./00_tar` |
-| Submit | `./01_submit` |
-| Check Submission | `./02_check` |
 
 ---
 
@@ -117,12 +85,3 @@ The goal is to correctly process coordinates, produce valid outputs, and meet sy
 - Prefer behavioral modeling.
 - Keep latency within constraints.
 
----
-
-## Note
-
-Always check:
-- `Report/CC.area` and `Report/CC.timing`  
-- Ensure `MET` and no `Latch`.
-
-Good luck!

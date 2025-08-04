@@ -66,14 +66,12 @@ The goal is to correctly process coordinates, produce valid outputs, and meet sy
 2. **Architecture:** Asynchronous active-low reset only.
 3. **Clock Period:** Fixed at 12 ns.
 4. Next input group: arrives 2–5 cycles after `out_valid` falls.
-5. **No latches allowed:** (`grep "Latch" 02_SYN/syn.log`)
-6. Synthesis reports:
-   - `CC.area` and `CC.timing` in `Report/`
-   - Slack must be non-negative (`MET`)
-7. Gate-level sim must have **no timing violations**.
-8. **Latency:** ≤ 100 cycles (from `in_valid` falling to `out_valid` rising).
-9. Forbidden names: `error`, `latch`, `congratulation`.
-10. `out_valid` must not overlap with `in_valid`.
+5. **Synthesis Constraints:**
+   - Must have "MET" slack at end of timing report.
+   - No latches allowed.
+6. Gate-level sim must have **no timing violations**.
+7. **Latency:** ≤ 100 cycles (from `in_valid` falling to `out_valid` rising).
+8. `out_valid` must not overlap with `in_valid`.
 
 
 ---
@@ -84,4 +82,5 @@ The goal is to correctly process coordinates, produce valid outputs, and meet sy
 - For distance: P(x₀,y₀) to L: `ax + by + c = 0`
 - Prefer behavioral modeling.
 - Keep latency within constraints.
+- Pipeline to share multipliers.
 

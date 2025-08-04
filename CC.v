@@ -10,16 +10,6 @@ module CC(
 	output reg [7:0] xo, yo
     );
 
-/*input               clk, rst_n, in_valid;
-input       [1:0]   mode;
-input       [7:0]   xi, yi;  
-
-output reg          out_valid;
-output reg  [7:0]   xo, yo;*/
-//==============================================//
-//             Parameter and Integer            //
-//==============================================//
-
 //==============================================//
 //            FSM State Declaration             //
 //==============================================//
@@ -519,3 +509,4 @@ module slope_increment(
                     
 assign frame = x_standard + (sect * y_coordinate) / height;
 endmodule
+
